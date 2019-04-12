@@ -12,9 +12,10 @@
 #import <Foundation/Foundation.h>
 
 @interface CatchObC : NSObject
-    
-+ (BOOL)catchException:(void(^)(void))tryBlock error:(__autoreleasing NSError **)error;
-    
+
++ (BOOL)catchException:(void (^)(void))tryBlock
+                 error:(__autoreleasing NSError **)error;
+
 @end
 
 #endif /* CatchObC_h */
