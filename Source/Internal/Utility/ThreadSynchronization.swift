@@ -82,9 +82,11 @@ class ArraySync<T> {
         }
     }
 
-    func remove(at: Int) {
+    func remove(at index: Int) {
         _ = self.thread.sync(flags: .barrier) {
-            self.valueInst.remove(at: at)
+            guard self.valueInst.indices.contains(index)
+                else { return }
+            self.valueInst.remove(at: index)
         }
     }
 
