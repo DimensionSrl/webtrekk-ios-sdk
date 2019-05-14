@@ -820,10 +820,14 @@ extension UIInterfaceOrientation {
 
     var serialized: String {
         switch self {
-        case .landscapeLeft, .landscapeRight: return "landscape"
-        case .portrait, .portraitUpsideDown:  return "portrait"
-        case .unknown:                        return "undefined"
-        @unknown default:                     return "other"
+        case .landscapeLeft, .landscapeRight: 
+          return "landscape"
+        case .portrait, .portraitUpsideDown:  
+          return "portrait"
+        case .unknown:                        
+          return "undefined"
+        @unknown default:                     
+          return "other"
         }
     }
 }
