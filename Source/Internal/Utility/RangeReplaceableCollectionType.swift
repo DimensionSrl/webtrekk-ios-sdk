@@ -1,7 +1,7 @@
 internal extension RangeReplaceableCollection where Iterator.Element: Equatable {
 
-	internal mutating func removeFirstEqual(_ element: Iterator.Element) -> (Index, Iterator.Element)? {
-		guard let index = index(of: element) else {
+	mutating func removeFirstEqual(_ element: Iterator.Element) -> (Index, Iterator.Element)? {
+		guard let index = firstIndex(of: element) else {
 			return nil
 		}
 
